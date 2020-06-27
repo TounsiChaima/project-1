@@ -34,17 +34,17 @@ class EventsParent
         AOS.refresh(); 
       } 
     componentDidMount(){
- /*        this.setState({events: getEvents(), categories: getCategories()});
+      this.setState({ categories: getCategories()});
         AOS.init({
             duration : 2000
           })
-*/
+
           axios.get('http://localhost:4000/eventsDB/')
           .then(response=>{
             this.setState({events: response.data});
           })
           .catch(function(error){console.log(error)});
-          let events = this.state.events;
+        
          
     }
  
@@ -52,7 +52,7 @@ class EventsParent
         let {selectedCategorie,events,filtered}=this.state;
     
         this.setState({selectedCategorie: categorie});
-        filtered= selectedCategorie
+        filtered = selectedCategorie
         ? events.filter(m=>m.categorie._id=== selectedCategorie._id)
         : events;
         
@@ -128,9 +128,9 @@ function groupBy(amountOfItemsPerGroup, items){
         console.log(events[0] , lengthh);
         for(var k = 0; k < lengthh; k++)
         { 
-         let str =events[29].image.split("\\").join("/");
-         events[29].image = str;
-         console.log (k +'aaanndd events'+events[29].image); }
+         let str =events[1].image.split("\\").join("/");
+         events[1].image = str;
+         console.log (k +'aaanndd events'+events[1].image); }
         return ( 
         <React.Fragment>
 
@@ -156,7 +156,7 @@ function groupBy(amountOfItemsPerGroup, items){
                         
           return(
             <div id ='eventimage'>
-              <img src= 'http://127.0.0.1:4000/eventimage-1593105007821.jpg' id="eventsitem"/>
+              <img src= {current.image} id="eventsitem"/>
               <div className="overlay">
                 <div className='overlaycontent'>
 

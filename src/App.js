@@ -13,8 +13,8 @@ import 'aos/dist/aos.css';
 import TheCalendar from './components/theCalendar';
 window.addEventListener('scroll', function(){
   let offset = window.pageYOffset;
- // document.getElementById('layer').style.backgroundPositionY = offset*0.7 + "px";
-//document.getElementById('clubs_layer').style.backgroundPositionY = offset*0.7 + "px";
+ document.getElementById('layer').style.backgroundPositionY = offset*0.7 + "px";
+document.getElementById('layer_contact').style.backgroundPositionY = offset*0.7 + "px";
 })
 
 class App extends Component {
@@ -34,8 +34,8 @@ class App extends Component {
    
   
     
-     
-   
+     <Contact/>
+     <TheCalendar/>
       <Footer/>
       </React.Fragment>
      

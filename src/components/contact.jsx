@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import img from '../assets/Contact.jpg';
 
 
 class Contact extends React.Component{
@@ -36,9 +37,12 @@ class Contact extends React.Component{
   
   render() {
   return(
-    <div className="App" style={{ width:'100%', color:'black'}}
-   
-  >
+    <div className='row'style={{ backgroundColor:'white'}} >
+           
+           <div className="parallax" id='secparallax' style={{backgroundImage:`url(${img})`,backgroundAttachment:'fixed',
+            backgroundSize:'cover',textAlign:'center', maxHeight:'80vh', position:'relative'}}>
+                 
+                 <div  id='layer_contact'  >
     <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST"
     >
     <div className="form-group">
@@ -55,6 +59,8 @@ class Contact extends React.Component{
     </div>
     <button type="submit" className="btn btn-primary">Submit</button>
     </form>
+    </div>
+    </div>
     </div>
   );
   }

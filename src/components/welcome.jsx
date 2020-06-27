@@ -117,7 +117,7 @@ i=0;
             </div>
           
           <div className='col-md-5' style={{textAlign:'center'}}>
-              <img src={events} style={{maxHeight:'60vh', paddingBottom:'20%'}}></img>
+              <img className ='aboutCalendar'src={events} style={{maxHeight:'60vh', paddingBottom:'20%'}}></img>
           </div>
           <hr style={{width:'50%'}}/>
 
