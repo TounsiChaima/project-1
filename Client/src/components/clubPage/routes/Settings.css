@@ -1,0 +1,70 @@
+.content {
+    padding: 1rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .label-sub {
+    font-weight: normal;
+    color: gray;
+  }
+  
+  .settings-element {
+    margin-top: 1rem;
+  }
+  
+  .form-image-widget {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .upload-tools {
+    margin-left: 1rem;
+  }
+  
+  .upload {
+    color: green;
+    background-color: #1c91ea;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+  
+    border-right: solid #e0e0e0 1px;
+  }
+  
+  .tab-item-header {
+    padding: 10px;
+    text-align: right;
+    background-color: #f4f4f4;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #767695;
+  }
+  
+  .tab-item {
+    background-color: #ebeced;
+  
+    padding: 5px;
+    text-align: right;
+    border-left: solid #1c91ea 5px;
+  }
+  
+  .tab-item Button {
+    font-weight: bold;
+  }
+  
+  .tab-item-notselected {
+    padding: 10px;
+    text-align: right;
+  }
