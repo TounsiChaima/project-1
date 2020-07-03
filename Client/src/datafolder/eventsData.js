@@ -3,48 +3,46 @@
 const upcomingEV = [
   {
     _id: "5b21ca3eeb7f6fbccd471815",
-    title: "Tunirobots",
-    category:"Robotics",
-    
-    image : 'C:\Users\Arij\draft\src\assets',
-    
-    Date: "2020-04",
-    
+    title
+    :
+    "CSTC",
+    dsc
+    :
+    "The Computer Society Tech Congress (CSTC) is a national event that wil...",
+    image
+    :
+    "http://localhost:5000/uploads/image-1593554669080.jpg",
+    __v
+    :
+    0,
+    start
+    :
+    "2020-06-29T00:00:00.000+00:00",
+    end
+    :
+    "2020-07-03T00:00:00.000+00:00"
   },
   {
-    _id: "5b21ca3eeb7f6fbccd471815",
-    title: "Tunirobots",
-    category:"Robotics",
+    title
+    :
+    "AERODAY",
+    dsc
+    :
+    "Tunisian Aeroday est la journée nationale de l'aéronautique en Tunisie...",
+    image
+    :
+    "http://localhost:5000/uploads/image-1593556431612.jpg",
+    __v
+    :
+    0,
+    start
+    :
+    "2020-07-12",
+    end
+    :
+    "2020-07-20"
     
-    image : 'C:\Users\Arij\draft\src\assets',
-    
-    Date: "2020-04",
-    
-  },
-  {
-    _id: "5b21ca3eeb7f6fbccd471815",
-    title: "Tunirobots",
-    category:"Robotics",
-    
-    image : 'C:\Users\Arij\draft\src\assets',
-    
-    Date: "2020-04",
-    
-  },
-  {
-    _id: "5b21ca3eeb7f6fbccd471816",
-    title: "Aeroday",
-    image : '../assets/aeroday.jpg',
-    category : "Robotics" ,
-    Date: "2020-04",
-  },
-  {
-    _id: "5b21ca3eeb7f6fbccd471817",
-    title: "CSTC",
-    image : '../assets/aeroday.jpg',
-    category :"Computer science",
-    Date: "2020-04",
-}
+  }
 ];
 
 export function getUpcomingEV() {

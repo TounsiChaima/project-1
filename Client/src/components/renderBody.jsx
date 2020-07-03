@@ -222,4 +222,9 @@ _handleImageChange(e) {
               <Button onClick={this.props.onHide}>Close</Button>
             </Modal.Footer>
           </Modal>
-          </d
+          </div>
+         );
+    }
+}
+ 
+export default RenderBody;

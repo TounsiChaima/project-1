@@ -132,22 +132,7 @@ export default class TheCalendar extends React.Component {
            }
          })
       };
-      // handleEventClick= ({event}) => {
-        // openevent is a function I wrote to open a form to edit that appointment
-       // this.props.openAppointment(event.extendedProps)
- //this.dialog.showAlert('Hello Dialog!')}
- 
-  /*  handleEventDrop = (info) => {
-            if(window.confirm("Are you sure you want to change the event date?")){
-                console.log('change confirmed')
-    
-                // updateAppointment is another custom method
-                this.props.updateAppointment({...info.event.extendedProps, start: info.event.start, end: info.event.end})
-    
-            } else {
-                console.log('change aborted')
-            }
-       }*/
+      
        changeTitle = () => {   
         let events = [...this.state.events];
         events[0].title = new Date().toTimeString();
@@ -162,7 +147,7 @@ export default class TheCalendar extends React.Component {
       formatDate(string){
         var options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(string).toLocaleDateString([],options);
-    }
+      }
       
   render() {
     let {title, start, end, events,newStart}=this.state;
@@ -185,11 +170,8 @@ export default class TheCalendar extends React.Component {
     }
     let handleSec =(titlee,newStartt,newEnd,eventss)=>{
       console.log(this.state.events);
-     // this.setState({addModalChangeShow:true});
-     
-     
+    
      this.dialog.show({
-      // title:" title",
        body: 'The date will be changed ',
     
       
@@ -200,7 +182,7 @@ export default class TheCalendar extends React.Component {
            'OK',
            () => {
              
-             eventss.start=newStartt;
+      eventss.start=newStartt;
       let newEvents= this.state.events;
       let theEvent = newEvents.filter(e => e.title ==titlee )
       theEvent[0].start=newStartt;
@@ -209,9 +191,8 @@ export default class TheCalendar extends React.Component {
       const data = theEvent[0];
       console.log(data);
        axios.post('http://localhost:5000/events/update/'+theID,theEvent[0])
-        .then(response=>{
-         let mainOne=response.data;
-        
+            .then(response=>{
+              console.log('success');
         }) 
     },
            'btn-primary'

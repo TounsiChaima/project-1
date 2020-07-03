@@ -71,8 +71,9 @@ export default class Club extends React.Component {
       <Team/></div>
 
 
-     
+   
       <div className='j2'><Feedback/> </div>
+    
       <div className='j2'><Footer/> </div>
 
       

@@ -46,4 +46,11 @@ class App extends Component {
        
         <Footer/>
   
-  
+     </React.Fragment>
+     
+   
+     );
+  }
+}
+ 
+export default App;

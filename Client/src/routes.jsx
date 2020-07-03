@@ -13,12 +13,14 @@ import Editing from './components/clubPage/editing';
 import {getClubs} from "./datafolder/clubData";
 import TheCalendar from './components/theCalendar';
 
+
+
 const clubs = getClubs();
 let eventsDB = [];
 axios.get('http://localhost:5000/events/')
 .then(response=>{
   let events= response.data;
- const eventsDB= events;
+ let eventsDB= events;
   eventsDB.map(event=>{
     
      let str =event.image.split("\\").join("/");
@@ -31,25 +33,25 @@ axios.get('http://localhost:5000/events/')
    
 })})
 .catch(function(error){console.log(error)});
+console.log(eventsDB);
 
 
 
 const routes = (
+  
     <Switch>
       <Route exact path="/" component={App}/>
-      <Route exact path="/SignIn" component={SignInForm}/>
-      <Route exact path="/SignUp" component={SignUpForm}/>
       <Route exact path="/Dashboard" component={Dashboard}/>
-   
-
       <Route exact path="/manageEvents" component={TheCalendar}/>
       <Route exact path="/editProfile" component={Editing}/>
+      <Route exact path="/SignIn" component={SignInForm}/>
+
       {
-      eventsDB.map(event=>{
-                  console.log("event in map"+event);
-              return (<Route exact path={"/"+event.title}
-                 component={() => <Event title={event.title} 
-                 image= {event.image} 
+      clubs.map(club=>{
+                  console.log("event in map"+club);
+              return (<Route exact path={"/"+club.title}
+                 component={() => <Event title={club.title} 
+                 image= {club.image} 
                   />}/>)
                }
                 ),
@@ -64,6 +66,8 @@ const routes = (
 
             
       </Switch>
+
+     
     
 );
 
